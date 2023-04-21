@@ -2,11 +2,11 @@
   <div>
     <Topnav />
     <div class="banner">
-      <h1>山竹 UI</h1>
+      <h1>山竹UI</h1>
       <h2>一个基于 Vue 的 UI 组件库</h2>
       <p class="actions">
-        <a href="">Github</a>
-        <a href="">开始</a>
+        <a href="https://github.com">GitHub</a>
+        <router-link to="/doc">开始</router-link>
       </p>
     </div>
   </div>
