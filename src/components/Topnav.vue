@@ -1,7 +1,6 @@
 <template>
   <div class="topnav">
     <div class="logo" @click="toggleMenu">LOGO</div>
-    <!-- 添加 click事件 -->
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -15,10 +14,9 @@
 import { inject, Ref } from 'vue'
 export default {
   setup() {
-    const menuVisiable = inject<Ref<boolean>>('menuVisiable') // get，通过 menuVisiable 获取
+    const menuVisible = inject<Ref<boolean>>('menuVisible') // get，通过 menuVisible 获取
     const toggleMenu = () => {
-      // 定义 click 事件触发的函数
-      menuVisiable.value = !menuVisiable.value
+      menuVisible.value = !menuVisible.value
     }
     return { toggleMenu }
   },
@@ -56,8 +54,8 @@ export default {
     top: 50%;
     transform: translateY(-50%);
   }
-  // 当页面宽度小于500px时隐藏菜单，Logo居中
-  @media (max-width: 500px) {
+  // 当页面宽度小于700px时隐藏菜单，Logo居中
+  @media (max-width: 700px) {
     > .menu {
       display: none;
     }
