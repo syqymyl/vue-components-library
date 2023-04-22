@@ -1,12 +1,27 @@
 <template>
   <div class="topnav">
-    <div class="logo">LOGO</div>
+    <div class="logo" @click="toggleMenu">LOGO</div>
+    <!-- 添加 click事件 -->
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
     </ul>
   </div>
 </template>
+
+<script lang="ts">
+import { inject, Ref } from 'vue'
+export default {
+  setup() {
+    const menuVisiable = inject<Ref<boolean>>('menuVisiable') // get，通过 menuVisiable 获取
+    const toggleMenu = () => {
+      // 定义 click 事件触发的函数
+      menuVisiable.value = !menuVisiable.value
+    }
+    return { toggleMenu }
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .topnav {
