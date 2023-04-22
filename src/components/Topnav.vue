@@ -6,7 +6,7 @@
       <li>菜单2</li>
     </ul>
     <span class="toggleAside" @click="toggleMenu"></span>
-    <!-- 小于600px时出现切换按钮 -->
+    <!-- 小于700px时出现切换按钮 -->
   </div>
 </template>
 
