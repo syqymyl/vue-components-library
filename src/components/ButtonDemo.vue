@@ -13,6 +13,16 @@
     <Button>默认按钮</Button>
     <Button size="small">默认按钮</Button>
   </div>
+  <div>
+    <Button theme="link" size="big">默认按钮</Button>
+    <Button theme="link">默认按钮</Button>
+    <Button size="small" theme="link">默认按钮</Button>
+  </div>
+  <div>
+    <Button size="big" theme="text">默认按钮</Button>
+    <Button theme="text">默认按钮</Button>
+    <Button size="small" theme="text">默认按钮</Button>
+  </div>
 </template>
 
 <script lang="ts">
