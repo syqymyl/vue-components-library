@@ -156,7 +156,7 @@ $red: red;
       }
     }
   }
-  &.gulu-theme-button {
+  &.mango-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -165,8 +165,8 @@ $red: red;
       }
     }
   }
-  &.gulu-theme-link,
-  &.gulu-theme-text {
+  &.mango-theme-link,
+  &.mango-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
