@@ -8,7 +8,7 @@ export default {
   props: { value: Boolean }, // 接收外部传过来的变量
   setup(props, context) {
     const toggle = () => {
-      context.emit('input', !props.value) // 'input'与 SwitchDemo.vue 中的 @input 对应，!props.value 与 $event 对应
+      context.emit('update:value', !props.value) 
     }
     return { toggle }
   },

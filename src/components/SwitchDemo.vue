@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 通过外界获取默认的状态 -->
-    <Switch :value="y" @input="y = $event" />
+    <Switch v-model:value="y" />
   </div>
 </template>
 
