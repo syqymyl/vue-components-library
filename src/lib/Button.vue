@@ -1,5 +1,7 @@
 <template>
-  <button class="mango-button" :class="`theme-${theme}`"><slot /></button>
+  <button class="mango-button" :class="{ [`mango-theme-${theme}`]: theme }">
+    <slot />
+  </button>
 </template>
 
 <script>
@@ -11,7 +13,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 32px; // 提前声明变量
 $border-color: #d9d9d9;
 $color: #333;

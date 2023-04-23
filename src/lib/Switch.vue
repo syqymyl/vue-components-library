@@ -1,5 +1,11 @@
 <template>
-  <button @click="toggle" :class="{ checked: value }"><span></span></button>
+  <button
+    class="mango-switch"
+    @click="toggle"
+    :class="{ 'mango-checked': value }"
+  >
+    <span></span>
+  </button>
 </template>
 
 <script lang="ts">
@@ -18,7 +24,7 @@ export default {
 <style lang="scss" scoped>
 $h: 22px;
 $h2: $h - 4px;
-button {
+.mango-switch {
   height: $h;
   width: $h * 2;
   border: none;
@@ -35,7 +41,7 @@ button {
     border-radius: $h2 / 2;
     transition: all 250ms;
   }
-  &.checked {
+  &.mango-checked {
     background: #1890ff;
     > span {
       left: calc(100% - #{$h2} - 2px);
@@ -49,7 +55,7 @@ button {
       width: $h2 + 4px;
     }
   }
-  &.checked:active {
+  &.mango-checked:active {
     > span {
       width: $h2 + 4px;
       margin-left: -4px;
