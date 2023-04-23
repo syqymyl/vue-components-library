@@ -1,14 +1,29 @@
 <template>
-  <button class="mango-button" :class="{ [`mango-theme-${theme}`]: theme }">
+  <button class="mango-button" :class="classes">
     <slot />
   </button>
 </template>
 
-<script>
+<script lang="ts">
+import { computed } from 'vue'
 export default {
   props: {
     // 如果 theme undefined，则默认为 button
-    theme: { type: String, default: 'button' },
+    theme: {
+      type: String,
+      default: 'button',
+    },
+    size: {
+      type: String,
+      default: 'normal',
+    },
+  },
+  setup(props) {
+    const { theme, size } = props
+    const classes = computed(() => {
+      return { [`mango-theme-${theme}`]: theme, [`mango-size-${size}`]: size }
+    })
+    return { classes }
   },
 }
 </script>
@@ -65,6 +80,18 @@ $radius: 4px;
     &:hover,
     &:focus {
       background: darken(white, 5%);
+    }
+  }
+  &.mango-theme-button {
+    &.mango-size-big {
+      font-size: 24px;
+      height: 48px;
+      padding: 0 16px;
+    }
+    &.mango-size-small {
+      font-size: 12px;
+      height: 20px;
+      padding: 0 4px;
     }
   }
 }

@@ -7,6 +7,12 @@
     <Button theme="link">默认按钮</Button>
     <Button theme="text">默认按钮</Button>
   </div>
+  <h1>示例2</h1>
+  <div>
+    <Button size="big">默认按钮</Button>
+    <Button>默认按钮</Button>
+    <Button size="small">默认按钮</Button>
+  </div>
 </template>
 
 <script lang="ts">
