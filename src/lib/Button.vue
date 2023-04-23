@@ -49,6 +49,7 @@ $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
 $red: red;
+$grey: grey;
 .mango-button {
   box-sizing: border-box;
   height: $h;
