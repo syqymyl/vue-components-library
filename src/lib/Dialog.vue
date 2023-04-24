@@ -1,25 +1,27 @@
 <template>
   <!-- 为弹窗添加可见/不可见功能 -->
   <template v-if="visible">
-    <!-- 点击黑色遮罩层关闭弹窗（可选） -->
-    <div class="mango-dialog-overlay" @click="onClickOverlay"></div>
-    <div class="mango-dialog-wrapper">
-      <div class="mango-dialog">
-        <header>
-          <!-- 标题插槽 -->
-          <slot name="title" />
-          <span @click="close" class="mango-dialog-close"></span>
-        </header>
-        <main>
-          <!-- 内容插槽 -->
-          <slot name="content" />
-        </main>
-        <footer>
-          <Button level="main" @click="ok">OK</Button>
-          <Button @click="cancel">Cancel</Button>
-        </footer>
+    <Teleport to="body">
+      <!-- 点击黑色遮罩层关闭弹窗（可选） -->
+      <div class="mango-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="mango-dialog-wrapper">
+        <div class="mango-dialog">
+          <header>
+            <!-- 标题插槽 -->
+            <slot name="title" />
+            <span @click="close" class="mango-dialog-close"></span>
+          </header>
+          <main>
+            <!-- 内容插槽 -->
+            <slot name="content" />
+          </main>
+          <footer>
+            <Button level="main" @click="ok">OK</Button>
+            <Button @click="cancel">Cancel</Button>
+          </footer>
+        </div>
       </div>
-    </div>
+    </Teleport>
   </template>
 </template>
 
