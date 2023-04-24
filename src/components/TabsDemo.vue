@@ -4,7 +4,7 @@
   <!-- 通过 Tabs 控制导航的选中和内容的切换，selected 用 title 表示 -->
   <Tabs v-model:selected="x">
     <Tab title="导航1">内容1</Tab>
-    <Tab title="导航2">内容2</Tab>
+    <Tab title="导航10000">内容2</Tab>
   </Tabs>
 </template>
 
