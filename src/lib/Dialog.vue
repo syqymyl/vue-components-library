@@ -1,20 +1,21 @@
 <template>
   <!-- 为弹窗添加可见/不可见功能 -->
   <template v-if="visible">
-    <div class="mango-dialog-overlay"></div>
+    <!-- 点击黑色遮罩层关闭弹窗（可选） -->
+    <div class="mango-dialog-overlay" @click="onClickOverlay"></div>
     <div class="mango-dialog-wrapper">
       <div class="mango-dialog">
         <header>
           标题
-          <span class="mango-dialog-close"></span>
+          <span @click="close" class="mango-dialog-close"></span>
         </header>
         <main>
           <p>第一行字</p>
           <p>第二行字</p>
         </main>
         <footer>
-          <Button level="main">OK</Button>
-          <Button>Cancel</Button>
+          <Button level="main" @click="ok">OK</Button>
+          <Button @click="cancel">Cancel</Button>
         </footer>
       </div>
     </div>
@@ -29,9 +30,47 @@ export default {
       type: Boolean,
       default: false, // 弹窗默认不可见
     },
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: true, // 默认点击遮罩层关闭弹窗
+    },
+    ok: {
+      type: Function,
+    },
+    cancel: {
+      type: Function,
+    },
   },
   components: {
     Button,
+  },
+  setup(props, context) {
+    const close = () => {
+      context.emit('update:visible', false)
+    }
+    const onClickOverlay = () => {
+      // 当 closeOnClickOverlay 值为 true 时，点击遮罩层关闭弹窗（运行 close函数）
+      if (props.closeOnClickOverlay) {
+        close()
+      }
+    }
+    const ok = () => {
+      // 与 DialogDemo.vue 中的 f1 对应，共同控制是否需要设置填满内容后点 ok 才能关闭弹窗
+      if (props.ok && props.ok() !== false) {
+        close()
+      }
+    }
+    // 与 DialogDemo.vue 中的 f2 对应
+    const cancel = () => {
+      context.emit('cancel')
+      close()
+    }
+    return {
+      close,
+      onClickOverlay,
+      ok,
+      cancel,
+    }
   },
 }
 </script>
