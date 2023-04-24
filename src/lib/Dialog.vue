@@ -1,6 +1,7 @@
 <template>
   <!-- 为弹窗添加可见/不可见功能 -->
   <template v-if="visible">
+    <!-- 使用 Teleport 组件将 Dialog 移到 body 下防止遮挡 -->
     <Teleport to="body">
       <!-- 点击黑色遮罩层关闭弹窗（可选） -->
       <div class="mango-dialog-overlay" @click="onClickOverlay"></div>
