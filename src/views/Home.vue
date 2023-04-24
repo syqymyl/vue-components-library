@@ -34,13 +34,14 @@ $green: #02bcb0;
 $border-radius: 20px;
 $color: #007974;
 
-// 实现背景渐变
+// 实现背景渐变和圆弧
 .topnavAndBanner {
   background: linear-gradient(
     145deg,
     rgba(227, 255, 253, 1) 0%,
     rgba(183, 233, 230, 1) 100%
   );
+  clip-path:ellipse(80% 60% at 50% 40%);
 }
 
 // 页面下半部分的 icon 样式（变大）
