@@ -6,12 +6,13 @@
     <div class="mango-dialog-wrapper">
       <div class="mango-dialog">
         <header>
-          标题
+          <!-- 标题插槽 -->
+          <slot name="title" />
           <span @click="close" class="mango-dialog-close"></span>
         </header>
         <main>
-          <p>第一行字</p>
-          <p>第二行字</p>
+          <!-- 内容插槽 -->
+          <slot name="content" />
         </main>
         <footer>
           <Button level="main" @click="ok">OK</Button>

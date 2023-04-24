@@ -8,7 +8,16 @@
     :closeOnClickOverlay="false"
     :ok="f1"
     :cancel="f2"
-  ></Dialog>
+  >
+    <!-- 使用具名插槽控制弹窗内容 -->
+    <template v-slot:content>
+      <div>用户名：</div>
+      <div>密码：</div>
+    </template>
+    <template v-slot:title>
+      <strong>登录</strong>
+    </template></Dialog
+  >
 </template>
 
 <script lang="ts">
