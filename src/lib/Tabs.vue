@@ -4,13 +4,13 @@
     <div class="mango-tabs-nav" ref="container">
       <!-- 渲染：t 为 title -->
       <!-- 点击哪个 Tabs 就会触发执行对该 Tab 的select 函数 -->
-      <!-- 当传过来的 title 是被选中的，则具有 selected 属性 -->
+      <!-- 当传过来的 title 是被选中的，则具有 selected 属性，且 selectedItem = 这个被选中的标签-->
       <div
         class="mango-tabs-nav-item"
         v-for="(t, index) in titles"
         :ref="
           (el) => {
-            if (el) navItems[index] = el
+            if (t === selected) selectedItem = el
           }
         "
         @click="select(t)"
@@ -44,18 +44,12 @@ export default {
     selected: { type: String },
   },
   setup(props, context) {
-    const navItems = ref<HTMLDivElement[]>([]) // 数组类型为 div 元素数组
+    const selectedItem = ref<HTMLDivElement>(null) // 类型为 div 元素
     const indicator = ref<HTMLDivElement>(null)
     const container = ref<HTMLDivElement>(null)
     const x = () => {
-      // navItems.value 是一个包含两个导航的div的数组
-      const divs = navItems.value
-
-      // 找到有 seleted 属性的 div
-      const result = divs.filter((div) => div.classList.contains('selected'))[0]
-
       // 获取选中的导航的宽度
-      const { width } = result.getBoundingClientRect()
+      const { width } = selectedItem.value.getBoundingClientRect()
 
       // 将选中的导航的宽度赋给下划线的长度
       indicator.value.style.width = width + 'px'
@@ -64,7 +58,7 @@ export default {
       const { left: left1 } = container.value.getBoundingClientRect()
 
       // 获取被选中的导航标签最左边的距离，用 left2存储
-      const { left: left2 } = result.getBoundingClientRect()
+      const { left: left2 } = selectedItem.value.getBoundingClientRect()
 
       // 计算下划线滑动的距离
       const left = left2 - left1
@@ -95,7 +89,7 @@ export default {
       defaults,
       titles,
       select,
-      navItems,
+      selectedItem,
       indicator,
       container,
     }
