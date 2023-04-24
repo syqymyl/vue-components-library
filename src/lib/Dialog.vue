@@ -1,23 +1,35 @@
 <template>
-  <div class="mango-dialog-overlay"></div>
-  <div class="mango-dialog-wrapper">
-    <div class="mango-dialog">
-      <header>标题 <span class="mango-dialog-close"></span></header>
-      <main>
-        <p>第一行字</p>
-        <p>第二行字</p>
-      </main>
-      <footer>
-        <Button level="main">OK</Button>
-        <Button>Cancel</Button>
-      </footer>
+  <!-- 为弹窗添加可见/不可见功能 -->
+  <template v-if="visible">
+    <div class="mango-dialog-overlay"></div>
+    <div class="mango-dialog-wrapper">
+      <div class="mango-dialog">
+        <header>
+          标题
+          <span class="mango-dialog-close"></span>
+        </header>
+        <main>
+          <p>第一行字</p>
+          <p>第二行字</p>
+        </main>
+        <footer>
+          <Button level="main">OK</Button>
+          <Button>Cancel</Button>
+        </footer>
+      </div>
     </div>
-  </div>
+  </template>
 </template>
 
 <script lang="ts">
 import Button from './Button.vue'
 export default {
+  props: {
+    visible: {
+      type: Boolean,
+      default: false, // 弹窗默认不可见
+    },
+  },
   components: {
     Button,
   },
