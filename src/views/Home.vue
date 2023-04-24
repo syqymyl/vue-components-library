@@ -1,25 +1,41 @@
 <template>
-  <div class="topnavAndBanner">
-    <Topnav />
-    <div class="banner">
-      <h1>山竹UI</h1>
-      <h2>一个基于 Vue 的 UI 组件库</h2>
-      <p class="actions">
-        <a href="https://github.com">GitHub</a>
-        <router-link to="/doc">开始</router-link>
-      </p>
+  <div>
+    <div class="topnavAndBanner">
+      <Topnav />
+      <div class="banner">
+        <h1>山竹UI</h1>
+        <h2>一个基于 Vue 的 UI 组件库</h2>
+        <p class="actions">
+          <a href="https://github.com">GitHub</a>
+          <router-link to="/doc">开始</router-link>
+        </p>
+      </div>
     </div>
+    <div class="features">
+      <ul>
+      <li>
+        <svg>
+          <use xlink:href="#icon-vue"></use>
+        </svg>
+        <h3>基于 Vue 3</h3>
+        <p>使用 Vue 3 Composition API</p>
+      </li>
+      <li>
+        <svg>
+          <use xlink:href="#icon-ts"></use>
+        </svg>
+        <h3>基于 TypeScript </h3>
+        <p>源代码采用 TypeScript 书写</p>
+      </li>
+      <li>
+        <svg>
+          <use xlink:href="#icon-light"></use>
+        </svg>
+        <h3>代码易读</h3>
+        <p>每个组件的源代码都极其简洁</p>
+      </li>
+    </ul>
   </div>
-  <div class="features">
-    <svg class="icon">
-      <use xlink:href="#icon-vue"></use>
-    </svg>
-    <svg class="icon">
-      <use xlink:href="#icon-ts"></use>
-    </svg>
-    <svg class="icon">
-      <use xlink:href="#icon-light"></use>
-    </svg>
 </template>
 
 <script lang="ts">
@@ -44,11 +60,52 @@ $color: #007974;
   clip-path:ellipse(80% 60% at 50% 40%);
 }
 
-// 页面下半部分的 icon 样式（变大）
+// 页面下半部分的样式
 .features {
-  >svg {
-    width: 64px;
-    height: 64px;
+  margin: 64px auto;
+  width: 400px;
+
+  @media (min-width: 800px) {
+    width: 800px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
+
+  >ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    >li {
+      width: 400px;
+      margin: 16px 0;
+      display: grid;
+      justify-content: start;
+      align-content: space-between;
+      // icon 与 文字的布局
+      grid-template-areas:
+        "icon title"
+        "icon text";
+      grid-template-columns: 80px auto;
+      grid-template-rows: 1fr auto;
+
+      // icon 变大
+      >svg {
+        grid-area: icon;
+        width: 72px;
+        height: 72px;
+      }
+
+      >h3 {
+        grid-area: title;
+        font-size: 28px;
+      }
+
+      >p {
+        grid-area: text
+      }
+    }
   }
 }
 

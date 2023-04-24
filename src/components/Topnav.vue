@@ -32,7 +32,7 @@ $color: #007974;
 .topnav {
   color: $color;
   display: flex;
-  padding: 16px;
+  padding: 16px 32px;
   position: fixed;
   top: 0;
   left: 0;
@@ -47,8 +47,8 @@ $color: #007974;
 
     // 让导航栏中的icon变大
     > svg {
-      width: 32px;
-      height: 32px;
+      width: 40px;
+      height: 40px;
     }
   }
 
