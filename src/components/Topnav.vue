@@ -1,22 +1,34 @@
 <template>
   <div class="topnav">
-    <div class="logo">
+    <!-- 点击山竹logo回首页 -->
+    <router-link to="/" class="logo">
       <svg class="icon">
         <use xlink:href="#icon-shanzhu"></use>
       </svg>
-    </div>
+    </router-link>
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li>
+        <!-- 添加指向文档链接 -->
+        <router-link to="/doc">文档</router-link>
+      </li>
     </ul>
-    <span class="toggleAside" @click="toggleMenu"></span>
-    <!-- 小于700px时出现切换按钮 -->
+    <!-- toggleMenuButtonVisible 控制页面菜单按钮在首页不出现 -->
+    <svg v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleMenu">
+      <use xlink:href="#icon-menu"></use>
+    </svg>
   </div>
 </template>
 
 <script lang="ts">
 import { inject, Ref } from 'vue'
 export default {
+  props: {
+    // 菜单按钮
+    toggleMenuButtonVisible: {
+      type: Boolean,
+      default: false, // 默认 false，菜单按钮不出现
+    },
+  },
   setup() {
     const menuVisible = inject<Ref<boolean>>('menuVisible') // get，通过 menuVisible 获取
     const toggleMenu = () => {
@@ -62,16 +74,17 @@ $color: #007974;
     }
   }
 
+  // 菜单按钮样式
   > .toggleAside {
-    display: none;
-    width: 24px;
-    height: 24px;
-    background: red;
+    width: 32px;
+    height: 32px;
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    display: none;
   }
+
   // 当页面宽度小于700px时隐藏菜单，Logo居中
   @media (max-width: 700px) {
     > .menu {
