@@ -13,6 +13,7 @@
       >
         {{ t }}
       </div>
+      <div class="mango-tabs-nav-indicator"></div>
     </div>
     <div class="mango-tabs-content">
       <!-- 渲染：c 为 组件 Tab -->
@@ -72,6 +73,7 @@ $border-color: #d9d9d9;
     display: flex;
     color: $color;
     border-bottom: 1px solid $border-color;
+    position: relative;
 
     // 导航栏标签样式
     &-item {
@@ -87,7 +89,18 @@ $border-color: #d9d9d9;
         color: $blue;
       }
     }
+
+    // 下划线样式
+    &-indicator {
+      position: absolute;
+      height: 3px;
+      background: $blue;
+      left: 0;
+      bottom: -1px;
+      width: 100px;
+    }
   }
+
   // 内容样式
   &-content {
     padding: 8px 0;
