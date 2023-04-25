@@ -4,8 +4,9 @@
 </template>
 
 <script>
-import { provide, ref } from 'vue'
+import { provide, ref, onMounted } from 'vue'
 import { router } from './router'
+
 export default {
   name: 'App',
   setup() {
@@ -18,6 +19,13 @@ export default {
         // 屏幕宽度小于等于700时，aside 隐藏
         menuVisible.value = false
       }
+    })
+    // 监听屏幕宽度
+    onMounted(() => {
+      window.addEventListener('resize', () => {
+        const width = document.documentElement.clientWidth
+        menuVisible.value = width <= 700 ? false : true
+      })
     })
   },
 }
