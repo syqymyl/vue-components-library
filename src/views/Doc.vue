@@ -32,7 +32,7 @@
           </li>
         </ol>
       </aside>
-      <main>
+      <main @click="closeAside">
         <router-view />
       </main>
     </div>
@@ -46,7 +46,15 @@ export default {
   components: { Topnav },
   setup() {
     const menuVisible = inject<Ref<boolean>>('menuVisible') // get
-    return { menuVisible }
+
+    // 当页面大小 <= 700且侧边栏显示时，点击空白处可隐藏侧边栏
+    const closeAside = () => {
+      const width = document.documentElement.clientWidth
+      if (menuVisible.value && width <= 700) {
+        menuVisible.value = !menuVisible.value
+      }
+    }
+    return { menuVisible, closeAside }
   },
 }
 </script>
