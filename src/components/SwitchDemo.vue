@@ -4,14 +4,23 @@
     <div class="demo">
       <h2>常规用法</h2>
       <div class="demo-component">
-        <!-- 通过外界获取默认的状态 -->
         <Switch1Demo />
       </div>
       <div class="demo-actions">
         <Button>查看代码</Button>
       </div>
       <div class="demo-code">
-        <pre>{{ Switch1Demo.__sourceCode }}</pre>
+        <!-- 使用 Prism 对代码进行高亮 -->
+        <pre
+          class="language-html"
+          v-html="
+            Prism.highlight(
+              Switch1Demo.__sourceCode,
+              Prism.languages.html,
+              'html'
+            )
+          "
+        />
       </div>
     </div>
     <div class="demo">
@@ -23,7 +32,17 @@
         <Button>查看代码</Button>
       </div>
       <div class="demo-code">
-        <pre>{{ Switch2Demo.__sourceCode }}</pre>
+        <!-- 使用 Prism 对源码进行高亮，Switch2Demo.__sourceCode 是文本类型的源码 -->
+        <pre
+          class="language-html"
+          v-html="
+            Prism.highlight(
+              Switch2Demo.__sourceCode,
+              Prism.languages.html,
+              'html'
+            )
+          "
+        />
       </div>
     </div>
   </div>
@@ -33,8 +52,13 @@
 import Button from '../lib/Button.vue'
 import Switch1Demo from './Switch1.demo.vue'
 import Switch2Demo from './Switch2.demo.vue'
+// 使用 Prism 对代码进行高亮
+import 'prismjs'
+import 'prismjs/themes/prism.css'
+const Prism = (window as any).Prism
+
 import { ref } from 'vue'
-console.log(Switch1Demo.__sourceCode)
+
 export default {
   components: {
     Switch1Demo,
@@ -47,6 +71,7 @@ export default {
       bool,
       Switch1Demo,
       Switch2Demo,
+      Prism,
     }
   },
 }
