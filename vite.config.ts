@@ -8,9 +8,9 @@ export default {
     demo: (options) => {
       const { code, path } = options
       const file = fs.readFileSync(path).toString()
-      // parsed：含有demo属性的标签
+      // parsed：含有demo标签组件——Switch1.demo.vue
       const parsed = baseParse(file).children.find((n) => n.tag === 'demo')
-      // title：标题对象
+      // title：标题对象——<demo>常规使用</demo>
       const title = parsed.children[0].content
       // main：源代码对象
       const main = file.split(parsed.loc.source).join('').trim()
