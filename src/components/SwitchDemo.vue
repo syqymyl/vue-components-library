@@ -30,7 +30,6 @@
 </template>
 
 <script lang="ts">
-import Switch from '../lib/Switch.vue'
 import Button from '../lib/Button.vue'
 import Switch1Demo from './Switch1.demo.vue'
 import Switch2Demo from './Switch2.demo.vue'
@@ -40,7 +39,6 @@ export default {
   components: {
     Switch1Demo,
     Switch2Demo,
-    Switch,
     Button,
   },
   setup() {
