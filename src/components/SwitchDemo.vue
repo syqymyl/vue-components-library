@@ -5,7 +5,7 @@
       <h2>常规用法</h2>
       <div class="demo-component">
         <!-- 通过外界获取默认的状态 -->
-        <Switch v-model:value="bool" />
+        <Switch1Demo />
       </div>
       <div class="demo-actions">
         <Button>查看代码</Button>
@@ -17,7 +17,7 @@
     <div class="demo">
       <h2>支持 disabled</h2>
       <div class="demo-component">
-        <Switch v-model:value="bool" disabled />
+        <Switch2Demo />
       </div>
       <div class="demo-actions">
         <Button>查看代码</Button>
@@ -32,9 +32,13 @@
 <script lang="ts">
 import Switch from '../lib/Switch.vue'
 import Button from '../lib/Button.vue'
+import Switch1Demo from './Switch1.demo.vue'
+import Switch2Demo from './Switch2.demo.vue'
 import { ref } from 'vue'
 export default {
   components: {
+    Switch1Demo,
+    Switch2Demo,
     Switch,
     Button,
   },
