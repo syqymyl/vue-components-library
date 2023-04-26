@@ -60,6 +60,7 @@ export default {
     }
     const ok = () => {
       // 与 DialogDemo.vue 中的 f1 对应，共同控制是否需要设置填满内容后点 ok 才能关闭弹窗
+      // @ts-ignore
       if (props.ok && props.ok() !== false) {
         close()
       }
