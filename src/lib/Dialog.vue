@@ -36,7 +36,7 @@ export default {
     },
     closeOnClickOverlay: {
       type: Boolean,
-      default: true, // 默认点击遮罩层关闭弹窗
+      default: false, // 默认点击遮罩层无法关闭弹窗
     },
     ok: {
       type: Function,
