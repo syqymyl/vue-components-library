@@ -7,7 +7,8 @@
       <component :is="component" />
     </div>
     <div class="demo-actions">
-      <Button @click="toggleCode">查看代码</Button>
+      <Button @click="hideCode" v-if="codeVisible">隐藏代码</Button>
+      <Button @click="showCode" v-else>查看代码</Button>
     </div>
     <div class="demo-code" v-if="codeVisible">
       <!-- 代码展示 -->
@@ -42,16 +43,16 @@ export default {
       )
     })
     // 点击事件：是否显示代码
-    const toggleCode = () => {
-      codeVisible.value = !codeVisible.value
-    }
+    const showCode = () => (codeVisible.value = true)
+    const hideCode = () => (codeVisible.value = false)
     // 默认不显示
     const codeVisible = ref(false)
     return {
       Prism,
       html,
       codeVisible,
-      toggleCode,
+      showCode,
+      hideCode,
     }
   },
 }
