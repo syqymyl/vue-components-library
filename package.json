@@ -1,6 +1,10 @@
 {
-  "name": "vue-components-library",
-  "version": "0.0.0",
+  "name": "shanzhu-ui-1",
+  "version": "0.0.1",
+  "files": [
+    "dist/lib/*"
+  ],
+  "main": "dist/lib/shanzhu.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
