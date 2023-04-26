@@ -19,16 +19,16 @@
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to="/doc/switch">Switch 组件</router-link>
+            <router-link to="/doc/tabs">Tabs-标签</router-link>
           </li>
           <li>
-            <router-link to="/doc/button">Button 组件</router-link>
+            <router-link to="/doc/switch">Switch-开关</router-link>
           </li>
           <li>
-            <router-link to="/doc/dialog">Dialog 组件</router-link>
+            <router-link to="/doc/button">Button-按钮</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">Tabs 组件</router-link>
+            <router-link to="/doc/dialog">Dialog-对话框</router-link>
           </li>
         </ol>
       </aside>
@@ -40,23 +40,23 @@
 </template>
 
 <script lang="ts">
-import Topnav from "../components/Topnav.vue";
-import { inject, Ref } from "vue";
+import Topnav from '../components/Topnav.vue'
+import { inject, Ref } from 'vue'
 export default {
   components: { Topnav },
   setup() {
-    const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
+    const menuVisible = inject<Ref<boolean>>('menuVisible') // get
 
     // 当页面大小 <= 700且侧边栏显示时，点击空白处可隐藏侧边栏
     const closeAside = () => {
-      const width = document.documentElement.clientWidth;
+      const width = document.documentElement.clientWidth
       if (menuVisible.value && width <= 700) {
-        menuVisible.value = !menuVisible.value;
+        menuVisible.value = !menuVisible.value
       }
-    };
-    return { menuVisible, closeAside };
+    }
+    return { menuVisible, closeAside }
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -90,14 +90,14 @@ $aside-index: 10;
 
   > main {
     flex-grow: 1;
-    padding: 16px;
+    padding: 16px 48px;
     background: white;
   }
 }
 
 aside {
   background: #acacef;
-  width: 150px;
+  width: 180px;
   padding: 16px 0;
   position: fixed;
   top: 0;
@@ -117,7 +117,7 @@ aside {
     > li {
       > a {
         display: block; // 填充整个 li
-        padding: 10px 32px;
+        padding: 10px 36px;
         text-decoration: none;
       }
 
