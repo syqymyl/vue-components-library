@@ -40,23 +40,23 @@
 </template>
 
 <script lang="ts">
-import Topnav from '../components/Topnav.vue'
-import { inject, Ref } from 'vue'
+import Topnav from "../components/Topnav.vue";
+import { inject, Ref } from "vue";
 export default {
   components: { Topnav },
   setup() {
-    const menuVisible = inject<Ref<boolean>>('menuVisible') // get
+    const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
 
     // 当页面大小 <= 700且侧边栏显示时，点击空白处可隐藏侧边栏
     const closeAside = () => {
-      const width = document.documentElement.clientWidth
+      const width = document.documentElement.clientWidth;
       if (menuVisible.value && width <= 700) {
-        menuVisible.value = !menuVisible.value
+        menuVisible.value = !menuVisible.value;
       }
-    }
-    return { menuVisible, closeAside }
+    };
+    return { menuVisible, closeAside };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -96,7 +96,7 @@ $aside-index: 10;
 }
 
 aside {
-  background: lightblue;
+  background: #acacef;
   width: 150px;
   padding: 16px 0;
   position: fixed;
@@ -108,7 +108,8 @@ aside {
 
   // 让文档和组件列表 padding
   > h2 {
-    margin-bottom: 4px;
+    font-size: 20px;
+    margin: 8px 0;
     padding: 0px 16px;
   }
 
@@ -116,7 +117,7 @@ aside {
     > li {
       > a {
         display: block; // 填充整个 li
-        padding: 4px 16px;
+        padding: 10px 32px;
         text-decoration: none;
       }
 

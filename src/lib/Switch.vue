@@ -9,17 +9,17 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 export default {
   props: { value: Boolean }, // 接收外部传过来的变量
   // setup() 函数中返回的对象会暴露给模板和组件实例
   setup(props, context) {
     const toggle = () => {
-      context.emit('update:value', !props.value)
-    }
-    return { toggle }
+      context.emit("update:value", !props.value);
+    };
+    return { toggle };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -43,7 +43,7 @@ $h2: $h - 4px;
     transition: all 250ms;
   }
   &.mango-checked {
-    background: #1890ff;
+    background: #6134c2;
     > span {
       left: calc(100% - #{$h2} - 2px);
     }

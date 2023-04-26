@@ -5,22 +5,22 @@
 </template>
 
 <script lang="ts">
-import { computed } from 'vue'
+import { computed } from "vue";
 export default {
   props: {
     // 从外部接受对象 theme 等，自动绑定到 this 上
     // 如果 theme undefined，则默认为 button
     theme: {
       type: String,
-      default: 'button', // link/text
+      default: "button", // link/text
     },
     size: {
       type: String,
-      default: 'normal', // big/small
+      default: "normal", // big/small
     },
     level: {
       type: String,
-      default: 'normal', // main/danger
+      default: "normal", // main/danger
     },
     disabled: {
       type: Boolean,
@@ -29,24 +29,24 @@ export default {
   },
   setup(props) {
     //
-    const { theme, size, level } = props
+    const { theme, size, level } = props;
     const classes = computed(() => {
       return {
         [`mango-theme-${theme}`]: theme,
         [`mango-size-${size}`]: size,
         [`mango-level-${level}`]: level,
-      }
-    })
-    return { classes }
+      };
+    });
+    return { classes };
   },
-}
+};
 </script>
 
 <style lang="scss">
 $h: 32px; // 提前声明变量
 $border-color: #d9d9d9;
 $color: #333;
-$blue: #40a9ff;
+$purple: #6134c2;
 $radius: 4px;
 $red: red;
 $grey: grey;
@@ -71,8 +71,8 @@ $grey: grey;
   }
   &:hover,
   &:focus {
-    color: $blue;
-    border-color: $blue;
+    color: $purple;
+    border-color: $purple;
   }
   &:focus {
     outline: none;
@@ -84,10 +84,10 @@ $grey: grey;
   &.mango-theme-link {
     border-color: transparent;
     box-shadow: none;
-    color: $blue;
+    color: $purple;
     &:hover,
     &:focus {
-      color: lighten($blue, 10%);
+      color: lighten($purple, 10%);
     }
   }
   &.mango-theme-text {
@@ -112,13 +112,13 @@ $grey: grey;
   &.mango-theme-button {
     // 限制 size 为 normal
     &.mango-level-main {
-      background: $blue;
+      background: $purple;
       color: white;
-      border-color: $blue;
+      border-color: $purple;
       &:hover,
       &:focus {
-        background: darken($blue, 10%);
-        border-color: darken($blue, 10%);
+        background: darken($purple, 10%);
+        border-color: darken($purple, 10%);
       }
     }
     &.mango-level-danger {
@@ -143,10 +143,10 @@ $grey: grey;
   }
   &.mango-theme-text {
     &.mango-level-main {
-      color: $blue;
+      color: $purple;
       &:hover,
       &:focus {
-        color: darken($blue, 10%);
+        color: darken($purple, 10%);
       }
     }
     &.mango-level-danger {

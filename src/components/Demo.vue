@@ -69,11 +69,6 @@ $border-color: #d9d9d9;
     padding: 8px 16px;
     border-bottom: 1px solid $border-color;
   }
-  > p {
-    font-size: 20px;
-    padding: 8px 16px;
-    border: 2px solid red;
-  }
   &-component {
     padding: 16px;
   }
