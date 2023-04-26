@@ -8,7 +8,11 @@
     <p>
       如果你想找合适的组件用于 demo 中，我强烈建议你试试此
       UI库。如果你是抱着看源代码的目的来的，那么这个库值得一看。源代码放在了
-      github
+      <a
+        href="https://github.com/syqymyl/vue-components-library"
+        target="_blank"
+        >github</a
+      >
       上，历史提交信息非常规范，你可以按提交的顺序逐个查看；你也可以直接查看每个组件的源代码和示例，运行方法见
       README.md。
     </p>
