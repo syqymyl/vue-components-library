@@ -1,5 +1,5 @@
 {
-  "name": "shanzhu-ui-1",
+  "name": "shanzhu-ui",
   "version": "0.0.1",
   "files": [
     "dist/lib/*"

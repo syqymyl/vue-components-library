@@ -2,6 +2,12 @@
 常规用法
 </demo>
 <template>
+  <!-- Dialog 的属性有： 
+       v-model：是否显示 Dialog，默认隐藏
+       closeOnClickOverlay：是否可以通过点击 遮罩层 关闭 Dialog，默认不可以
+       ok：点击确定按钮后触发回调函数 f1
+       cancel：点击确定按钮后触发回调函数 f2
+  -->
   <div>
     <Button @click="toggle">打开对话框</Button>
     <Dialog

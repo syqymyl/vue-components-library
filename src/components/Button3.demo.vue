@@ -2,6 +2,7 @@
 支持 level
 </demo>
 <template>
+  <!-- level 属性值有：main/normal/danger，默认值是 normal -->
   <div>
     <!-- theme=normal下的 level -->
     <div>

@@ -3,7 +3,7 @@
 </demo>
 <template>
   <div>
-    <!-- theme 未定义时，默认值是 button -->
+    <!-- theme 属性值有：button/link/text，默认值是 button -->
     <Button>默认按钮</Button>
     <Button theme="link">链接按钮</Button>
     <Button theme="text">文字按钮</Button>
