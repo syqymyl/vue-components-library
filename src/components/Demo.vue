@@ -17,12 +17,12 @@
 </template>
 
 <script lang="ts">
-import Button from "../lib/Button.vue";
+import Button from '../lib/Button.vue'
 // 使用 Prism 对代码进行高亮
-import "prismjs";
-import "prismjs/themes/prism.css";
-import { computed, ref } from "vue";
-const Prism = (window as any).Prism;
+import 'prismjs'
+import 'prismjs/themes/prism.css'
+import { computed, ref } from 'vue'
+const Prism = (window as any).Prism
 
 export default {
   components: {
@@ -38,23 +38,23 @@ export default {
       return Prism.highlight(
         props.component.__sourceCode,
         Prism.languages.html,
-        "html"
-      );
-    });
+        'html'
+      )
+    })
     // 点击事件：是否显示代码
     const toggleCode = () => {
-      codeVisible.value = !codeVisible.value;
-    };
+      codeVisible.value = !codeVisible.value
+    }
     // 默认不显示
-    const codeVisible = ref(false);
+    const codeVisible = ref(false)
     return {
       Prism,
       html,
       codeVisible,
       toggleCode,
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -69,7 +69,11 @@ $border-color: #d9d9d9;
     padding: 8px 16px;
     border-bottom: 1px solid $border-color;
   }
-
+  > p {
+    font-size: 20px;
+    padding: 8px 16px;
+    border: 2px solid red;
+  }
   &-component {
     padding: 16px;
   }
@@ -85,7 +89,7 @@ $border-color: #d9d9d9;
 
     > pre {
       line-height: 1.1;
-      font-family: Consolas, "Courier New", Courier, monospace;
+      font-family: Consolas, 'Courier New', Courier, monospace;
       margin: 0;
     }
   }

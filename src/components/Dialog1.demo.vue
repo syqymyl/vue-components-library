@@ -6,7 +6,7 @@
     <Button @click="toggle">打开对话框</Button>
     <Dialog
       v-model:visible="x"
-      :closeOnClickOverlay="false"
+      :closeOnClickOverlay="true"
       :ok="f1"
       :cancel="f2"
     >
