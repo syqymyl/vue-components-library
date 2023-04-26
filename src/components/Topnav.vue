@@ -7,6 +7,9 @@
       </svg>
     </router-link>
     <ul class="menu">
+      <li class="home">
+        <router-link to="/">主页</router-link>
+      </li>
       <li>
         <a
           href="https://github.com/syqymyl/vue-components-library"
@@ -44,7 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color: #007974;
+$color: #6134c2;
 $topnav-index: 20;
 .topnav {
   color: $color;
@@ -82,6 +85,11 @@ $topnav-index: 20;
           height: 32px;
         }
       }
+    }
+
+    > .home {
+      font-size: 20px;
+      padding: 2px 0;
     }
   }
 

@@ -46,16 +46,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$green: #02bcb0;
+$purple: #613cdc;
 $border-radius: 20px;
-$color: #007974;
+$color: #6134c2;
 
 // 实现背景渐变和圆弧
 .topnavAndBanner {
   background: linear-gradient(
-    145deg,
-    rgba(227, 255, 253, 1) 0%,
-    rgba(183, 233, 230, 1) 100%
+    90deg,
+    rgba(202, 190, 227, 1) 0%,
+    rgba(172, 172, 239, 1) 100%
   );
   clip-path: ellipse(80% 60% at 50% 40%);
 }
@@ -134,7 +134,7 @@ $color: #007974;
 
     a {
       margin: 0 8px;
-      background: $green;
+      background: $purple;
       color: white;
       display: inline-block;
       padding: 8px 24px;
