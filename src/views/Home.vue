@@ -6,7 +6,6 @@
         <h1>山竹UI</h1>
         <h2>一个基于 Vue 的 UI 组件库</h2>
         <p class="actions">
-          <a href="https://github.com/syqymyl/vue-components-library">GitHub</a>
           <router-link to="/doc">开始</router-link>
         </p>
       </div>

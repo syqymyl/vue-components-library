@@ -8,8 +8,12 @@
     </router-link>
     <ul class="menu">
       <li>
-        <!-- 添加指向文档链接 -->
-        <router-link to="/doc">文档</router-link>
+        <a
+          href="https://github.com/syqymyl/vue-components-library"
+          target="_blank"
+          ><svg class="icon">
+            <use xlink:href="#icon-github"></use></svg
+        ></a>
       </li>
     </ul>
     <!-- toggleMenuButtonVisible 控制页面菜单按钮在首页不出现 -->
@@ -72,6 +76,12 @@ $topnav-index: 20;
 
     > li {
       margin: 0 1em;
+      > a {
+        > svg {
+          width: 32px;
+          height: 32px;
+        }
+      }
     }
   }
 
