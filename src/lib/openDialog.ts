@@ -3,7 +3,7 @@ import Dialog from './Dialog.vue'
 // @ts-ignore
 import { createApp, h } from 'vue'
 export const openDialog = (options) => {
-  const { title, content, ok, cancel, onClickOverlay } = options
+  const { title, content, ok, cancel, closeOnClickOverlay } = options
   const div = document.createElement('div')
   document.body.appendChild(div)
   // 关闭弹窗：实例不挂载到 div 上，并把 div 移除
@@ -27,6 +27,7 @@ export const openDialog = (options) => {
           },
           ok,
           cancel,
+          closeOnClickOverlay,
         },
         {
           title,

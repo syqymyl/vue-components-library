@@ -28,6 +28,7 @@ export default {
       openDialog({
         title: h('strong', {}, '标题'),
         content: '你好',
+        closeOnClickOverlay: true,
         ok() {
           console.log('ok')
         },
