@@ -11,7 +11,7 @@ import { h } from 'vue'
 import Markdown from './components/Markdown.vue'
 // 添加“介绍”“快速入手”“安装”的路由
 import intro from './markdown/intro.md'
-import getStarted from './markdown/getStarted.md'
+import getStarted from './markdown/get-started.md'
 import install from './markdown/install.md'
 
 const history = createWebHashHistory()
