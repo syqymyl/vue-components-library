@@ -1,11 +1,10 @@
 {
   "name": "shanzhu-ui",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "files": [
     "dist/lib/*"
   ],
   "main": "dist/lib/shanzhu.js",
-  "module": "dist/lib/shanzhu.esm.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
