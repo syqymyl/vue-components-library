@@ -4,9 +4,9 @@
 
 然后在你的代码中写入下面的代码:
 
-```
-import { Button, Tab, Tabs, Switch, Dialog, openDialog } from "shanzhu-ui"
-import "shanzhu-ui/dist/lib/shanzhu.css"
+```javascript
+import { Button, Tab, Tabs, Switch, Dialog, openDialog } from 'shanzhu-ui'
+import 'shanzhu-ui/dist/lib/shanzhu.css'
 ```
 
 就可以使用我提供的组件了。
@@ -15,17 +15,17 @@ import "shanzhu-ui/dist/lib/shanzhu.css"
 
 代码示例：
 
-```
+```html
 <template>
   <div>
-    <Button>按钮</Button>
+    <button>按钮</button>
   </div>
 </template>
 <script>
-import { Button, Tabs, Tab, Switch, Dialog, openDialog } from "shanzhu-ui"
-export default {
-  components: { Button }
-}
+  import { Button, Tabs, Tab, Switch, Dialog, openDialog } from 'shanzhu-ui'
+  export default {
+    components: { Button },
+  }
 </script>
 ```
 
@@ -33,6 +33,6 @@ export default {
 
 如果你想使用组件中的示例代码，使用时请将示例代码中的这句代码删除：
 
-```
+```javascript
 import { * } from '../lib/index'
 ```
