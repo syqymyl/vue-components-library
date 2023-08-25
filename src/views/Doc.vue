@@ -30,6 +30,9 @@
           <li>
             <router-link to="/doc/dialog">Dialog-对话框</router-link>
           </li>
+          <li>
+            <router-link to="/doc/input">Input-输入框</router-link>
+          </li>
         </ol>
       </aside>
       <main @click="closeAside">
