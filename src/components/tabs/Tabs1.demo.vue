@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { Tabs, Tab } from '../lib/index'
+import { Tabs, Tab } from '../../lib/index'
 import { ref } from 'vue'
 export default {
   components: { Tabs, Tab },

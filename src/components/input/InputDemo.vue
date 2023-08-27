@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import Demo from './Demo.vue'
+import Demo from '../Demo.vue'
 import Input1Demo from './Input1.demo.vue'
 import Input2Demo from './Input2.demo.vue'
 import Input3Demo from './Input3.demo.vue'

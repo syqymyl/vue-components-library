@@ -1,12 +1,12 @@
 import { createWebHashHistory, createRouter } from 'vue-router'
 import Home from './views/Home.vue'
 import Doc from './views/Doc.vue'
-import DocDemo from './components/DocDemo.vue'
-import SwitchDemo from './components/SwitchDemo.vue'
-import ButtonDemo from './components/ButtonDemo.vue'
-import TabsDemo from './components/TabsDemo.vue'
-import DialogDemo from './components/DialogDemo.vue'
-import InputDemo from './components/InputDemo.vue'
+import SwitchDemo from './components/switch/SwitchDemo.vue'
+import ButtonDemo from './components/button/ButtonDemo.vue'
+import TabsDemo from './components/tabs/TabsDemo.vue'
+import DialogDemo from './components/dialog/DialogDemo.vue'
+import InputDemo from './components/input/InputDemo.vue'
+import GridDemo from './components/grid/GridDemo.vue'
 
 import { h } from 'vue'
 import Markdown from './components/Markdown.vue'
@@ -35,6 +35,7 @@ export const router = createRouter({
         { path: 'dialog', component: DialogDemo },
         { path: 'tabs', component: TabsDemo },
         { path: 'input', component: InputDemo },
+        { path: 'grid', component: GridDemo },
       ],
     },
   ],

@@ -32,6 +32,7 @@
           </li>
           <li>
             <router-link to="/doc/input">Input-输入框</router-link>
+            <router-link to="/doc/grid">Grid-网格</router-link>
           </li>
         </ol>
       </aside>

@@ -34,5 +34,5 @@ import 'shanzhu-ui/dist/lib/shanzhu.css'
 如果你想使用组件中的示例代码，使用时请将示例代码中的这句代码删除：
 
 ```javascript
-import { * } from '../lib/index'
+import { * } from '../../lib/index'
 ```

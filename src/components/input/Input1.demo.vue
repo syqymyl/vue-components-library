@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { Input } from '../lib/index'
+import { Input } from '../../lib/index'
 export default {
   components: { Input },
 }
