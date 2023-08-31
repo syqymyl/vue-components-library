@@ -34,6 +34,8 @@
             <router-link to="/doc/input">Input-输入框</router-link>
             <router-link to="/doc/grid">Grid-网格</router-link>
             <router-link to="/doc/layout">Layout-布局</router-link>
+            <router-link to="/doc/popover">Popover-弹出层</router-link>
+            <!-- <router-link to="/doc/popover">Collapse-手风琴</router-link> -->
           </li>
         </ol>
       </aside>
@@ -45,23 +47,23 @@
 </template>
 
 <script lang="ts">
-import Topnav from '../components/Topnav.vue'
-import { inject, Ref } from 'vue'
+import Topnav from "../components/Topnav.vue";
+import { inject, Ref } from "vue";
 export default {
   components: { Topnav },
   setup() {
-    const menuVisible = inject<Ref<boolean>>('menuVisible') // get
+    const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
 
     // 当页面大小 <= 700且侧边栏显示时，点击空白处可隐藏侧边栏
     const closeAside = () => {
-      const width = document.documentElement.clientWidth
+      const width = document.documentElement.clientWidth;
       if (menuVisible.value && width <= 700) {
-        menuVisible.value = !menuVisible.value
+        menuVisible.value = !menuVisible.value;
       }
-    }
-    return { menuVisible, closeAside }
+    };
+    return { menuVisible, closeAside };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -102,7 +104,7 @@ $aside-index: 10;
 
 aside {
   background: #acacef;
-  width: 180px;
+  width: 190px;
   padding: 16px 0;
   position: fixed;
   top: 0;
