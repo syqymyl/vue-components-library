@@ -3,8 +3,8 @@
 </demo>
 
 <template>
-  <!-- Sider 具有的 class 属性名：Sider -->
-  <Layout class="layout4">
+  <!-- Sider 具有的 class 属性名：mango-ider -->
+  <Layout class="mango-layout">
     <Sider class="demo">sider</Sider>
     <Layout>
       <Header class="demo">header</Header>
@@ -26,14 +26,14 @@ export default {
 </script>
 
 <style lang="scss">
-.layout4 {
+.mango-layout {
   height: 40vh;
   background-color: #acacef;
   > .demo {
     border: 1px solid black;
     min-height: 50px;
   }
-  > .sider {
+  > .mango-sider {
     width: 200px;
   }
 }

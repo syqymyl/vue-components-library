@@ -3,11 +3,11 @@
 </demo>
 
 <template>
-  <!-- Layout 具有的 class 属性名：layout；
-       Header 具有的 class 属性名：header；  
-       Content 具有的 class 属性名：content；
-       Footer 具有的 class 属性名：footer  -->
-  <Layout class="layout1">
+  <!-- Layout 具有的 class 属性名：mango-layout；
+       Header 具有的 class 属性名：mango-header；  
+       Content 具有的 class 属性名：mango-content；
+       Footer 具有的 class 属性名：mango-footer  -->
+  <Layout class="mango-layout">
     <Header class="demo">header</Header>
     <Content class="demo">content</Content>
     <Footer class="demo">footer</Footer>
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
-.layout1 {
+.mango-layout {
   height: 40vh;
   background-color: #acacef;
   > .demo {

@@ -1,5 +1,5 @@
 <template>
-  <div class="col" :class="colClass" :style="colStyle">
+  <div class="mango-col" :class="colClass" :style="colStyle">
     <div style="border: 1px solid black; height: 30px">
       <slot></slot>
     </div>
@@ -56,7 +56,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.col {
+.mango-col {
   height: 40px;
   width: 50%;
 

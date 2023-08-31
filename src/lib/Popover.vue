@@ -1,15 +1,17 @@
 <template>
-  <div class="popover" ref="popover">
+  <div class="mango-popover" ref="popover">
     <div
       ref="contentWrapper"
-      class="content-wrapper"
-      :class="{ [`position-${position}`]: true }"
+      class="mango-content-wrapper"
+      :class="{ [`mango-content-wrapper-position-${position}`]: true }"
       v-show="visible"
       @click.stop
     >
       <slot name="content"></slot>
     </div>
-    <span ref="triggerWrapper" class="trigger-wrapper"><slot></slot></span>
+    <span ref="triggerWrapper" class="mango-trigger-wrapper"
+      ><slot></slot
+    ></span>
   </div>
 </template>
 
@@ -141,12 +143,12 @@ export default {
 <style lang="scss" scoped>
 $border-color: #6134c2;
 $border-radius: 4px;
-.popover {
+.mango-popover {
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
-.content-wrapper {
+.mango-content-wrapper {
   position: absolute;
   border: 1px solid $border-color;
   // 不用 box-shadow，因为小三角没有阴影，改用 filter，配合 background-color
@@ -167,7 +169,7 @@ $border-radius: 4px;
     position: absolute;
   }
 
-  &.position-top {
+  &-position-top {
     margin-top: -10px;
     transform: translateY(-100%);
 
@@ -187,7 +189,7 @@ $border-radius: 4px;
     }
   }
 
-  &.position-bottom {
+  &-position-bottom {
     margin-top: 10px;
 
     &::before,
@@ -205,7 +207,7 @@ $border-radius: 4px;
     }
   }
 
-  &.position-left {
+  &-position-left {
     margin-left: -10px;
     transform: translateX(-100%);
 
@@ -225,7 +227,7 @@ $border-radius: 4px;
     }
   }
 
-  &.position-right {
+  &-position-right {
     margin-left: 10px;
 
     &::before,
@@ -245,7 +247,7 @@ $border-radius: 4px;
   }
 }
 
-.trigger-wrapper {
+.mango-trigger-wrapper {
   // 解决因按钮高度高于内部文字导致气泡文字位置偏移问题
   display: inline-block;
 }

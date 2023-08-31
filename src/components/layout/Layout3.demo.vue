@@ -3,7 +3,7 @@
 </demo>
 
 <template>
-  <Layout class="layout3">
+  <Layout class="mango-layout">
     <Header class="demo">header</Header>
     <Layout>
       <Content class="demo">content</Content>
@@ -25,14 +25,14 @@ export default {
 </script>
 
 <style lang="scss">
-.layout3 {
+.mango-layout {
   height: 40vh;
   background-color: #acacef;
   > .demo {
     border: 1px solid black;
     min-height: 50px;
   }
-  > .sider {
+  > .mango-sider {
     width: 200px;
   }
 }

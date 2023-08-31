@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="mango-header">
     <slot></slot>
   </div>
 </template>

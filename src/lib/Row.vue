@@ -1,5 +1,5 @@
 <template>
-  <div class="row" :style="rowStyle">
+  <div class="mango-row" :style="rowStyle">
     <slot></slot>
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.row {
+.mango-row {
   display: flex;
 }
 </style>
