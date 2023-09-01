@@ -29,7 +29,7 @@ export default {
   height: 40vh;
   background-color: #acacef;
   > .demo {
-    border: 1px solid black;
+    border: 1px solid #6134c2;
     min-height: 50px;
   }
   > .mango-sider {

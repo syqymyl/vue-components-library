@@ -1,6 +1,6 @@
 <template>
   <div class="mango-col" :class="colClass" :style="colStyle">
-    <div style="border: 1px solid black; height: 30px">
+    <div style="border: 1px solid #6134c2; height: 30px">
       <slot></slot>
     </div>
   </div>
