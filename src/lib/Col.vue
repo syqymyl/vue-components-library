@@ -1,6 +1,6 @@
 <template>
   <div class="mango-col" :class="colClass" :style="colStyle">
-    <div style="border: 1px solid #6134c2; height: 30px">
+    <div class="mango-col-div">
       <slot></slot>
     </div>
   </div>
@@ -59,6 +59,11 @@ export default defineComponent({
 .mango-col {
   height: 40px;
   width: 50%;
+  &-div {
+    border: 1px solid #6134c2;
+    height: 30px;
+    background-color: #acacef;
+  }
 
   $class-prefix: col-;
   @for $n from 1 through 24 {

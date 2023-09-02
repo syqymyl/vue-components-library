@@ -2,28 +2,26 @@
 常规用法
 </demo>
 <template>
-  <div class="grid1">
-    <!-- span 参数： 默认将一行划分为 24 等份，每行 span 的加和总值应等于 24 -->
-    <Row>
-      <Col></Col>
-      <Col></Col>
-    </Row>
-    <Row>
-      <Col></Col>
-      <Col></Col>
-      <Col></Col>
-    </Row>
-    <Row>
-      <Col></Col>
-      <Col></Col>
-      <Col></Col>
-      <Col></Col>
-    </Row>
-    <Row>
-      <Col span="2"></Col>
-      <Col span="22"></Col>
-    </Row>
-  </div>
+  <!-- span 参数： 默认将一行划分为 24 等份，每行 span 的加和总值应等于 24 -->
+  <Row>
+    <Col></Col>
+    <Col></Col>
+  </Row>
+  <Row>
+    <Col></Col>
+    <Col></Col>
+    <Col></Col>
+  </Row>
+  <Row>
+    <Col></Col>
+    <Col></Col>
+    <Col></Col>
+    <Col></Col>
+  </Row>
+  <Row>
+    <Col span="2"></Col>
+    <Col span="22"></Col>
+  </Row>
 </template>
 
 <script lang="ts">
@@ -33,9 +31,3 @@ export default {
   components: { Row, Col },
 }
 </script>
-
-<style lang="scss">
-.grid1 {
-  background-color: #acacef;
-}
-</style>

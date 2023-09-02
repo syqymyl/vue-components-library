@@ -45,6 +45,9 @@
           <li>
             <router-link to="/doc/Collapse">Collapse-折叠层</router-link>
           </li>
+          <li>
+            <router-link to="/doc/Pagination">Pagination-分页</router-link>
+          </li>
         </ol>
       </aside>
       <main @click="closeAside">
@@ -55,23 +58,23 @@
 </template>
 
 <script lang="ts">
-import Topnav from '../components/Topnav.vue'
-import { inject, Ref } from 'vue'
+import Topnav from "../components/Topnav.vue";
+import { inject, Ref } from "vue";
 export default {
   components: { Topnav },
   setup() {
-    const menuVisible = inject<Ref<boolean>>('menuVisible') // get
+    const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
 
     // 当页面大小 <= 700且侧边栏显示时，点击空白处可隐藏侧边栏
     const closeAside = () => {
-      const width = document.documentElement.clientWidth
+      const width = document.documentElement.clientWidth;
       if (menuVisible.value && width <= 700) {
-        menuVisible.value = !menuVisible.value
+        menuVisible.value = !menuVisible.value;
       }
-    }
-    return { menuVisible, closeAside }
+    };
+    return { menuVisible, closeAside };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
