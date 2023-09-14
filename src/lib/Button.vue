@@ -28,7 +28,6 @@ export default {
     },
   },
   setup(props) {
-    //
     const { theme, size, level } = props;
     const classes = computed(() => {
       return {
@@ -43,23 +42,34 @@ export default {
 </script>
 
 <style lang="scss">
-$h: 32px; // 提前声明变量
+// 提前声明变量
 $border-color: #d9d9d9;
 $color: #333;
 $purple: #6134c2;
-$radius: 4px;
+$white: white;
 $red: red;
 $grey: grey;
+$h: 32px;
+$radius: 4px;
+$padding: 12px;
+$margin-left: 8px;
+$font-size-big: 24px;
+$size-big-height: 48px;
+$size-big-padding: 16px;
+$font-size-small: 12px;
+$size-small-height: 20px;
+$size-small-padding: 4px;
+
 .mango-button {
   box-sizing: border-box;
   height: $h;
-  padding: 0 12px;
+  padding: 0 $padding;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  background: white;
+  background: $white;
   color: $color;
   border: 1px solid $border-color;
   border-radius: $radius;
@@ -67,7 +77,7 @@ $grey: grey;
   transition: background 250ms;
   & + & {
     // mango-button + mango-button
-    margin-left: 8px;
+    margin-left: $margin-left;
   }
   &:hover,
   &:focus {
@@ -96,24 +106,24 @@ $grey: grey;
     color: inherit;
     &:hover,
     &:focus {
-      background: darken(white, 5%);
+      background: darken($white, 5%);
     }
   }
   &.mango-size-big {
-    font-size: 24px;
-    height: 48px;
-    padding: 0 16px;
+    font-size: $font-size-big;
+    height: $size-big-height;
+    padding: 0 $size-big-padding;
   }
   &.mango-size-small {
-    font-size: 12px;
-    height: 20px;
-    padding: 0 4px;
+    font-size: $font-size-small;
+    height: $size-small-height;
+    padding: 0 $size-small-padding;
   }
   &.mango-theme-button {
     // 限制 size 为 normal
     &.mango-level-main {
       background: $purple;
-      color: white;
+      color: $white;
       border-color: $purple;
       &:hover,
       &:focus {
@@ -124,7 +134,7 @@ $grey: grey;
     &.mango-level-danger {
       background: $red;
       border-color: $red;
-      color: white;
+      color: $white;
       &:hover,
       &:focus {
         background: darken($red, 10%);

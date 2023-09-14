@@ -1,14 +1,13 @@
 <demo>
-一键打开 Dialog
+支持 Button 内置弹窗
 </demo>
 <template>
-  <!-- openDialog 可接受的参数有： 
-       v-model：是否显示 Dialog 
-       closeOnClickOverlay：是否可以通过点击 遮罩层 关闭 Dialog
+  <!-- 使用 openDialog， 它可以接受的参数有： 
        title：Dialog 的标题
        content：Dialog 的内容
-       ok：点击确定按钮后触发回调函数 f1
-       cancel：点击确定按钮后触发回调函数 f2
+       closeOnClickOverlay：是否可以通过点击 遮罩层 关闭 Dialog
+       ok：点击确定按钮后触发函数
+       cancel：点击确定按钮后触发函数 
   -->
   <div>
     <Button @click="showDialog">打开对话框</Button>
@@ -26,8 +25,8 @@ export default {
   setup() {
     const showDialog = () => {
       openDialog({
-        title: h('strong', {}, '标题'),
-        content: '你好',
+        title: h('strong', {}, '南航校训'),
+        content: '日新自强，知行合一',
         closeOnClickOverlay: true,
         ok() {
           console.log('ok')

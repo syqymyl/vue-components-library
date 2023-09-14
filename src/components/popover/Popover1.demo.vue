@@ -32,8 +32,7 @@
 </template>
 
 <script lang="ts">
-import { Popover } from '../../lib/index'
-import { Button } from '../../lib/index'
+import { Popover, Button } from '../../lib/index'
 export default {
   components: { Popover, Button },
 }

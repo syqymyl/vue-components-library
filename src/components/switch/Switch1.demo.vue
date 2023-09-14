@@ -3,7 +3,7 @@
 </demo>
 <template>
   <!-- Switch 的属性有： 
-       v-model：是否打开开关，默认处于关闭状态
+       value：是否打开开关，设置 bool 值为 false，表示默认处于关闭状态
   -->
   <Switch v-model:value="bool" />
 </template>

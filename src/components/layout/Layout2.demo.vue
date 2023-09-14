@@ -3,7 +3,7 @@
 </demo>
 
 <template>
-  <!-- Sider 具有的 class 属性名：mango-ider -->
+  <!-- Sider 具有的 class 属性名：mango-sider -->
   <Layout class="mango-layout">
     <Sider class="demo">sider</Sider>
     <Layout>
@@ -15,11 +15,7 @@
 </template>
 
 <script lang="ts">
-import { Layout } from '../../lib/index'
-import { Sider } from '../../lib/index'
-import { Header } from '../../lib/index'
-import { Content } from '../../lib/index'
-import { Footer } from '../../lib/index'
+import { Layout, Header, Content, Footer, Sider } from '../../lib/index'
 export default {
   components: { Layout, Sider, Header, Content, Footer },
 }

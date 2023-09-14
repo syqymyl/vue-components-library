@@ -25,8 +25,7 @@
 </template>
 
 <script lang="ts">
-import { Row } from '../../lib/index'
-import { Col } from '../../lib/index'
+import { Row, Col } from '../../lib/index'
 export default {
   components: { Row, Col },
 }

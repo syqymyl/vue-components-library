@@ -11,8 +11,7 @@
 </template>
 
 <script lang="ts">
-import { Collapse } from '../../lib/index'
-import { CollapseItem } from '../../lib/index'
+import { Collapse, CollapseItem } from '../../lib/index'
 export default {
   components: { CollapseItem, Collapse },
 }

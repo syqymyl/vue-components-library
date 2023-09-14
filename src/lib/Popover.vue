@@ -141,7 +141,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$border-color: #6134c2;
+$white: white;
+$purple: #6134c2;
 $border-radius: 4px;
 .mango-popover {
   display: inline-block;
@@ -150,11 +151,11 @@ $border-radius: 4px;
 }
 .mango-content-wrapper {
   position: absolute;
-  border: 1px solid $border-color;
-  // 不用 box-shadow，因为小三角没有阴影，改用 filter，配合 background-color
+  border: 1px solid $purple;
+  // 不用 box-shadow，因为小三角没有阴影，改用 filter，配合 background
   // box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   filter: drop-shadow(0 1px 1px rgba(97, 52, 194, 0.5));
-  background-color: white;
+  background: $white;
   padding: 0.5em 1em;
   max-width: 20em; // 控制气泡文字宽度
   word-break: break-all; // 解决气泡内容是英文时不换行问题
@@ -179,12 +180,12 @@ $border-radius: 4px;
       border-bottom: none; // 防抖
     }
     &::before {
-      border-top-color: #6134c2; // 透明的边长为 20px 的正方形的顶部三角为紫色
+      border-top-color: $purple; // 透明的边长为 20px 的正方形的顶部三角为紫色
       top: 100%;
     }
     // 白色三角
     &::after {
-      border-top-color: white; // 透明的边长为 20px 的正方形的顶部三角为白色
+      border-top-color: $white; // 透明的边长为 20px 的正方形的顶部三角为白色
       top: calc(100% - 1px); // 白色三角往上偏移 1px，让紫色边框露出
     }
   }
@@ -198,11 +199,11 @@ $border-radius: 4px;
       border-top: none; // 防抖
     }
     &::before {
-      border-bottom-color: #6134c2;
+      border-bottom-color: $purple;
       bottom: 100%;
     }
     &::after {
-      border-bottom-color: white;
+      border-bottom-color: $white;
       bottom: calc(100% - 1px);
     }
   }
@@ -218,11 +219,11 @@ $border-radius: 4px;
       border-right: none; // 防抖
     }
     &::before {
-      border-left-color: #6134c2;
+      border-left-color: $purple;
       left: 100%;
     }
     &::after {
-      border-left-color: white;
+      border-left-color: $white;
       left: calc(100% - 1px);
     }
   }
@@ -237,11 +238,11 @@ $border-radius: 4px;
       border-left: none; // 防抖
     }
     &::before {
-      border-right-color: #6134c2;
+      border-right-color: $purple;
       right: 100%;
     }
     &::after {
-      border-right-color: white;
+      border-right-color: $white;
       right: calc(100% - 1px);
     }
   }

@@ -2,7 +2,7 @@
 支持 readonly
 </demo>
 <template>
-  <Input value="姓名" readonly />
+  <Input value="用户名" readonly />
 </template>
 
 <script lang="ts">

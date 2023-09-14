@@ -20,9 +20,9 @@ export function demo() {
       const main = file.split(parsed.loc.source).join('').trim()
 
       return `export default function (Component) {
-  Component.__sourceCode = ${JSON.stringify(main)}
-  Component.__sourceCodeTitle = ${JSON.stringify(title)}
-}`.trim()
+        Component.__sourceCode = ${JSON.stringify(main)}
+        Component.__sourceCodeTitle = ${JSON.stringify(title)}
+      }`.trim()
     },
   }
 }

@@ -15,10 +15,7 @@
 </template>
 
 <script lang="ts">
-import { Layout } from '../../lib/index'
-import { Header } from '../../lib/index'
-import { Content } from '../../lib/index'
-import { Footer } from '../../lib/index'
+import { Layout, Header, Content, Footer } from '../../lib/index'
 export default {
   components: { Layout, Header, Content, Footer },
 }
@@ -27,7 +24,7 @@ export default {
 <style lang="scss">
 .mango-layout {
   height: 40vh;
-  background-color: #acacef;
+  background: #acacef;
   > .demo {
     border: 1px solid #6134c2;
     min-height: 50px;

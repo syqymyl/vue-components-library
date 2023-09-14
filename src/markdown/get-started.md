@@ -5,7 +5,25 @@
 然后在你的代码中写入下面的代码:
 
 ```javascript
-import { Button, Tab, Tabs, Switch, Dialog, openDialog } from 'shanzhu-ui'
+import {
+  Tab,
+  Tabs,
+  Switch,
+  Button,
+  Dialog,
+  openDialog,
+  Input,
+  Layout,
+  Sider,
+  Header,
+  Content,
+  Footer,
+  Row,
+  Col,
+  Collapse,
+  CollapseItem,
+  Pagination,
+} from 'shanzhu-ui'
 import 'shanzhu-ui/dist/lib/shanzhu.css'
 ```
 
@@ -22,7 +40,25 @@ import 'shanzhu-ui/dist/lib/shanzhu.css'
   </div>
 </template>
 <script>
-  import { Button, Tabs, Tab, Switch, Dialog, openDialog } from 'shanzhu-ui'
+  import {
+    Tab,
+    Tabs,
+    Switch,
+    Button,
+    Dialog,
+    openDialog,
+    Input,
+    Layout,
+    Sider,
+    Header,
+    Content,
+    Footer,
+    Row,
+    Col,
+    Collapse,
+    CollapseItem,
+    Pagination,
+  } from 'shanzhu-ui'
   export default {
     components: { Button },
   }
@@ -36,3 +72,8 @@ import 'shanzhu-ui/dist/lib/shanzhu.css'
 ```javascript
 import { * } from '../../lib/index'
 ```
+
+<br/>
+<br/>
+
+上一节：[安装](#/doc/install)

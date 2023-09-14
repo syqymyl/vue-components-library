@@ -10,7 +10,7 @@
         v-for="(t, index) in titles"
         :ref="
           (el) => {
-            if (t === selected) selectedItem = el
+            if (t === selected) selectedItem = el;
           }
         "
         @click="select(t)"
@@ -37,54 +37,54 @@
 </template>
 
 <script lang="ts">
-import Tab from './Tab.vue'
-import { computed, ref, onMounted, onUpdated } from 'vue'
+import Tab from "./Tab.vue";
+import { computed, ref, onMounted, onUpdated } from "vue";
 export default {
   props: {
     selected: { type: String },
   },
   setup(props, context) {
-    const selectedItem = ref<HTMLDivElement>(null) // 类型为 div 元素
-    const indicator = ref<HTMLDivElement>(null)
-    const container = ref<HTMLDivElement>(null)
+    const selectedItem = ref<HTMLDivElement>(null); // 类型为 div 元素
+    const indicator = ref<HTMLDivElement>(null);
+    const container = ref<HTMLDivElement>(null);
     const x = () => {
       // 获取选中的导航的宽度
-      const { width } = selectedItem.value.getBoundingClientRect()
+      const { width } = selectedItem.value.getBoundingClientRect();
 
       // 将选中的导航的宽度赋给下划线的长度
-      indicator.value.style.width = width + 'px'
+      indicator.value.style.width = width + "px";
 
       // 获取导航栏最左边的距离，用 left1存储
-      const { left: left1 } = container.value.getBoundingClientRect()
+      const { left: left1 } = container.value.getBoundingClientRect();
 
       // 获取被选中的导航标签最左边的距离，用 left2存储
-      const { left: left2 } = selectedItem.value.getBoundingClientRect()
+      const { left: left2 } = selectedItem.value.getBoundingClientRect();
 
       // 计算下划线滑动的距离
-      const left = left2 - left1
+      const left = left2 - left1;
 
       // 为下划线加属性 left，值为滑动的距离
-      indicator.value.style.left = left + 'px'
-    }
-    onMounted(x) // 只在第一次渲染执行
-    onUpdated(x)
+      indicator.value.style.left = left + "px";
+    };
+    onMounted(x); // 只在第一次渲染执行
+    onUpdated(x);
 
-    const defaults = context.slots.default() // 获取外面传过来的子内容(两个 Tab 对象)
+    const defaults = context.slots.default(); // 获取外面传过来的子内容(两个 Tab 对象)
     // 返回 true，说明 defaults[0] 的类型正好是 Tab
     // console.log(defaults[0].type === Tab)
     defaults.forEach((tag) => {
       if (tag.type !== Tab) {
-        throw new Error('Tabs 子标签必须是 Tab')
+        throw new Error("Tabs 子标签必须是 Tab");
       }
-    })
+    });
     // 从 default 中 取出 title
     const titles = defaults.map((tag) => {
-      return tag.props.title
-    })
+      return tag.props.title;
+    });
     // click 触发函数
     const select = (title: string) => {
-      context.emit('update:selected', title)
-    }
+      context.emit("update:selected", title);
+    };
     return {
       defaults,
       titles,
@@ -92,15 +92,18 @@ export default {
       selectedItem,
       indicator,
       container,
-    }
+    };
   },
-}
+};
 </script>
 
 <style lang="scss">
 $purple: #6134c2;
 $color: #333;
 $border-color: #d9d9d9;
+$item-padding: 8px;
+$item-margin: 16px;
+$indicator-height: 3px;
 
 .mango-tabs {
   &-nav {
@@ -112,8 +115,8 @@ $border-color: #d9d9d9;
 
     // 导航栏标签样式
     &-item {
-      padding: 8px 0;
-      margin: 0 16px;
+      padding: $item-padding 0;
+      margin: 0 $item-margin;
       cursor: pointer;
 
       &:first-child {
@@ -128,7 +131,7 @@ $border-color: #d9d9d9;
     // 下划线样式
     &-indicator {
       position: absolute;
-      height: 3px;
+      height: $indicator-height;
       background: $purple;
       left: 0;
       bottom: -1px;

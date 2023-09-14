@@ -4,9 +4,8 @@
 <template>
   <!-- Pagination 的属性有：
        totalPage：总页数；
-       curremtPage：当前页；
-       hideIfOnePage: 仅剩一页时隐藏页码，值为 true/false，默认为 true
-       默认值是 normal -->
+       currentPage：当前页，此处设置为10页
+       hideIfOnePage: 只有一页时是否隐藏页码，值为 true/false，默认为 true，表示只有一页时隐藏页码 -->
   <Pagination
     :totalPage="20"
     v-model:currentPage="currentPage"

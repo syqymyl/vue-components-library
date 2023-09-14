@@ -2,7 +2,7 @@
 支持 disabled
 </demo>
 <template>
-  <Input value="姓名" disabled />
+  <Input value="用户名" disabled />
 </template>
 
 <script lang="ts">

@@ -51,21 +51,25 @@ export default {
 
 <style lang="scss" scoped>
 $border-color: #6134c2;
-$background-color: #acacef;
+$background: #acacef;
+$margin: -1px;
+$padding: 8px;
 $border-radius: 4px;
+$min-height: 32px;
 .mango-collapseItem {
   &-title {
     border: 1px solid $border-color;
-    background-color: $background-color;
+    background: $background;
     // 使得内外 border 重合
-    margin-top: -1px;
-    margin-left: -1px;
-    margin-right: -1px;
-    margin-bottom: -1px;
-    min-height: 32px;
+    // margin-top: -1px;
+    // margin-left: -1px;
+    // margin-right: -1px;
+    // margin-bottom: -1px;
+    margin: $margin;
+    min-height: $min-height;
     display: flex;
     align-items: center;
-    padding: 0 8px;
+    padding: 0 $padding;
   }
   &:first-child {
     .mango-collapseItem-title {

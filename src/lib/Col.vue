@@ -56,13 +56,18 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+$border-color: #6134c2;
+$background: #acacef;
+$height: 40px;
+$div-height: 30px;
+
 .mango-col {
-  height: 40px;
+  height: $height;
   width: 50%;
   &-div {
-    border: 1px solid #6134c2;
-    height: 30px;
-    background-color: #acacef;
+    border: 1px solid $border-color;
+    height: $div-height;
+    background: $background;
   }
 
   $class-prefix: col-;

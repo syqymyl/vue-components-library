@@ -92,7 +92,10 @@ $purple: #6134c2;
 $border-radius: 4px;
 $width: 28px;
 $height: 28px;
+$margin: 4px;
+$padding: 4px;
 $font-size: 16px;
+
 .mango-pagination {
   &.hide {
     display: none;
@@ -107,12 +110,12 @@ $font-size: 16px;
     border-radius: $border-radius;
     justify-content: center;
     align-items: center;
-    margin: 0 4px;
+    margin: 0 $margin;
     font-size: $font-size;
   }
   &-item {
     border: 1px solid $grey;
-    padding: 0 4px;
+    padding: 0 padding;
     display: inline-flex;
     min-width: $width;
     cursor: pointer;
@@ -129,7 +132,7 @@ $font-size: 16px;
     }
   }
   &-nav {
-    width: $height;
+    width: $width;
     height: $height;
     background-color: $grey;
     cursor: pointer;

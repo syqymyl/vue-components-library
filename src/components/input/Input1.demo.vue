@@ -4,7 +4,7 @@
 <template>
   <div>
     <Input />
-    <Input value="姓名" />
+    <Input value="用户名" />
   </div>
 </template>
 

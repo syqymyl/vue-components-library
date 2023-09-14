@@ -8,7 +8,7 @@
     </router-link>
     <ul class="menu">
       <li class="home">
-        <router-link to="/">主页</router-link>
+        <router-link to="/">首页</router-link>
       </li>
       <li>
         <a
@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import { inject, Ref } from 'vue'
+import { inject, Ref } from "vue";
 export default {
   props: {
     // 菜单按钮
@@ -37,20 +37,27 @@ export default {
     },
   },
   setup() {
-    const menuVisible = inject<Ref<boolean>>('menuVisible') // get，通过 menuVisible 获取
+    const menuVisible = inject<Ref<boolean>>("menuVisible"); // get，通过 menuVisible 获取
     const toggleMenu = () => {
-      menuVisible.value = !menuVisible.value
-    }
-    return { toggleMenu }
+      menuVisible.value = !menuVisible.value;
+    };
+    return { toggleMenu };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
-$color: #6134c2;
+$purple: #6134c2;
 $topnav-index: 20;
+$logo-max-width: 6em;
+$logo-svg-size: 40px;
+$menu-svg-size: 32px;
+$home-font-size: 20px;
+$aside-button-size: 32px;
+$aside-button-left: 16px;
+
 .topnav {
-  color: $color;
+  color: $purple;
   display: flex;
   padding: 16px 32px;
   position: fixed;
@@ -62,13 +69,13 @@ $topnav-index: 20;
   align-items: center;
 
   > .logo {
-    max-width: 6em;
+    max-width: $logo-max-width;
     margin-right: auto;
 
     // 让导航栏中的icon变大
     > svg {
-      width: 40px;
-      height: 40px;
+      width: $logo-svg-size;
+      height: $logo-svg-size;
     }
   }
 
@@ -81,24 +88,24 @@ $topnav-index: 20;
       margin: 0 1em;
       > a {
         > svg {
-          width: 32px;
-          height: 32px;
+          width: $logo-svg-size;
+          height: $logo-svg-size;
         }
       }
     }
 
     > .home {
-      font-size: 20px;
+      font-size: $home-font-size;
       padding: 2px 0;
     }
   }
 
   // 菜单按钮样式
   > .toggleAside {
-    width: 32px;
-    height: 32px;
+    width: $aside-button-size;
+    height: $aside-button-size;
     position: absolute;
-    left: 16px;
+    left: $aside-button-left;
     top: 50%;
     transform: translateY(-50%);
     display: none;

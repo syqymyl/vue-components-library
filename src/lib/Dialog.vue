@@ -81,15 +81,22 @@ export default {
 </script>
 
 <style lang="scss">
-$radius: 4px;
+$white: white;
+$black: black;
 $border-color: #d9d9d9;
+$radius: 4px;
+$min-width: 15em;
+$overlay-z-index: 10;
+$wrapper-z-index: 11;
+$header-font-size: 20px;
+$close-size: 16px;
 
 .mango-dialog {
   // 对话框盒子样式
-  background: white;
+  background: $white;
   border-radius: $radius;
-  box-shadow: 0 0 3px fade_out(black, 0.5);
-  min-width: 15em;
+  box-shadow: 0 0 3px fade_out($black, 0.5);
+  min-width: $min-width;
   max-width: 90%;
 
   &-overlay {
@@ -98,8 +105,8 @@ $border-color: #d9d9d9;
     left: 0;
     width: 100%;
     height: 100%;
-    background: fade_out(black, 0.5); // 变灰
-    z-index: 10;
+    background: fade_out($black, 0.5); // 变灰
+    z-index: $overlay-z-index;
   }
 
   &-wrapper {
@@ -107,7 +114,7 @@ $border-color: #d9d9d9;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 11;
+    z-index: $wrapper-z-index;
   }
 
   > header {
@@ -116,7 +123,7 @@ $border-color: #d9d9d9;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 20px;
+    font-size: $header-font-size;
   }
 
   > main {
@@ -133,8 +140,8 @@ $border-color: #d9d9d9;
   &-close {
     position: relative;
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: $close-size;
+    height: $close-size;
     cursor: pointer;
 
     &::before,
@@ -143,7 +150,7 @@ $border-color: #d9d9d9;
       content: '';
       position: absolute;
       height: 1px;
-      background: black;
+      background: $black;
       width: 100%;
       top: 50%;
       left: 50%;
