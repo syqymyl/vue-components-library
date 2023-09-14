@@ -5,10 +5,11 @@
 </template>
 
 <script>
+import './svg.js'
 export default {
-  name: "Icon",
-  props: ["name"],
-};
+  name: 'Icon',
+  props: ['name'],
+}
 </script>
 <style lang="scss">
 .mango-icon {

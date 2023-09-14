@@ -22,6 +22,7 @@ import {
   Col,
   Collapse,
   CollapseItem,
+  Popover,
   Pagination,
 } from 'shanzhu-ui'
 import 'shanzhu-ui/dist/lib/shanzhu.css'
@@ -57,10 +58,30 @@ import 'shanzhu-ui/dist/lib/shanzhu.css'
     Col,
     Collapse,
     CollapseItem,
+    Popover,
     Pagination,
   } from 'shanzhu-ui'
   export default {
-    components: { Button },
+    components: {
+      Tab,
+      Tabs,
+      Switch,
+      Button,
+      Dialog,
+      openDialog,
+      Input,
+      Layout,
+      Sider,
+      Header,
+      Content,
+      Footer,
+      Row,
+      Col,
+      Collapse,
+      CollapseItem,
+      Popover,
+      Pagination,
+    },
   }
 </script>
 ```

@@ -13,7 +13,7 @@
 
 ## 版本更新
 
-> <strong>版本 0.0.4</strong> <br/> &nbsp;&nbsp;&nbsp;&nbsp;更新内容：增加 `Collapse`、`Popover`、`Pagination` 组件，规范化 `CSS` 的使用<br/><br/><strong>版本 0.0.3</strong> <br/> &nbsp;&nbsp;&nbsp;&nbsp;更新内容：增加 `Input`、`Layout`、`Grid` 组件<br/><br/><strong>版本 0.0.2</strong> <br/> &nbsp;&nbsp;&nbsp;&nbsp;更新内容：修复已知 bug，调整样式<br/><br/> <strong>版本 0.0.1</strong> <br/> &nbsp;&nbsp;&nbsp;&nbsp;基本实现组件库，包括官网和几个常用组件 `Switch`、`Button`、`Dialog`、`Tabs`<br/>
+> <strong>版本 0.0.5</strong> <br/> &nbsp;&nbsp;&nbsp;&nbsp;更新内容：修复不显示图标的 bug<br/><br/><strong>版本 0.0.4</strong> <br/> &nbsp;&nbsp;&nbsp;&nbsp;更新内容：增加 `Collapse`、`Popover`、`Pagination` 组件，规范化 `CSS` 的使用<br/><br/><strong>版本 0.0.3</strong> <br/> &nbsp;&nbsp;&nbsp;&nbsp;更新内容：增加 `Input`、`Layout`、`Grid` 组件<br/><br/><strong>版本 0.0.2</strong> <br/> &nbsp;&nbsp;&nbsp;&nbsp;更新内容：修复已知 bug，调整样式<br/><br/> <strong>版本 0.0.1</strong> <br/> &nbsp;&nbsp;&nbsp;&nbsp;基本实现组件库，包括官网和几个常用组件 `Switch`、`Button`、`Dialog`、`Tabs`<br/>
 
 <br/>
 <br/>
